@@ -1,0 +1,11 @@
+{
+  "name": "book-finder",
+  "version": "1.0.0",
+  "description": "A tool for using the Google Books API to construct a reading list",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matt Readout",
+  "license": "MIT"
+}
