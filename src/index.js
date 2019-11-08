@@ -14,6 +14,11 @@ const updateSearchResults = (newBooks) => {
 	resultsDisplayed = true
 }
 
+const addToReadingList = (book) => {
+	userReadingList.push(book)
+	console.log(`"${book.title}" added to your reading list`)
+}
+
 const app = async () => {
 	let step = 'start'
 	let searchTerm = ''
@@ -31,6 +36,7 @@ const app = async () => {
 			step = menuSelection()
 		} else if (parseInt(step) >= 1 && parseInt(step) <= 5) {
 			console.log(`you selected ${step}`)
+			addToReadingList(searchResults[parseInt(step) - 1])
 			step = 'exit'
 		}
 	}
