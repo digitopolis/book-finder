@@ -26,6 +26,7 @@ const showReadingList = () => {
 	} else {
 		displayResults(userReadingList)
 	}
+	menuOptions()
 }
 
 const app = async () => {
@@ -49,7 +50,7 @@ const app = async () => {
 			step = menuSelection()
 		} else if (step === 'list') {
 			showReadingList()
-			step = 'exit'
+			step = menuSelection()
 		}
 	}
 }
