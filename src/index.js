@@ -5,10 +5,13 @@ const { displayResults, welcome, getSearchTerm, menuOptions, menuSelection } = r
 
 let searchResults = []
 let userReadingList = []
+let resultsDisplayed = false
 
 const updateSearchResults = (newBooks) => {
 	searchResults = newBooks
 	displayResults(searchResults)
+	menuOptions()
+	resultsDisplayed = true
 }
 
 const app = async () => {
