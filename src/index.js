@@ -19,6 +19,14 @@ const addToReadingList = (book) => {
 	console.log(`"${book.title}" added to your reading list`)
 }
 
+const showReadingList = () => {
+	if (userReadingList.length === 0) {
+		console.log('Your reading list is empty!')
+	} else {
+		displayResults(userReadingList)
+	}
+}
+
 const app = async () => {
 	let step = 'start'
 	let searchTerm = ''
@@ -37,6 +45,9 @@ const app = async () => {
 		} else if (parseInt(step) >= 1 && parseInt(step) <= 5) {
 			console.log(`you selected ${step}`)
 			addToReadingList(searchResults[parseInt(step) - 1])
+			step = menuSelection()
+		} else if (step === 'list') {
+			showReadingList()
 			step = 'exit'
 		}
 	}
