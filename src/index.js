@@ -10,6 +10,7 @@ let resultsDisplayed = false
 const updateSearchResults = (newBooks) => {
 	searchResults = newBooks
 	displayResults(searchResults)
+	console.log('Enter a number to save the book to your reading list')
 	menuOptions()
 	resultsDisplayed = true
 }
