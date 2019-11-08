@@ -24,6 +24,7 @@ const showReadingList = () => {
 	if (userReadingList.length === 0) {
 		console.log('Your reading list is empty!')
 	} else {
+		console.log('Your reading list:')
 		displayResults(userReadingList)
 	}
 	menuOptions()
