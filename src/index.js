@@ -46,7 +46,7 @@ const app = async () => {
 		} else if (step === 'submit' && resultsDisplayed) {
 			step = menuSelection()
 		} else if (parseInt(step) >= 1 && parseInt(step) <= 5) {
-			console.log(`you selected ${step}`)
+			displayMessage('Item Selected', step)
 			addToReadingList(searchResults[parseInt(step) - 1])
 			step = menuSelection()
 		} else if (step === 'list') {
