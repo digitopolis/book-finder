@@ -17,14 +17,14 @@ const updateSearchResults = (newBooks) => {
 
 const addToReadingList = (book) => {
 	userReadingList.push(book)
-	console.log(`"${book.title}" added to your reading list`)
+	displayMessage('Added to List', book.title)
 }
 
 const showReadingList = () => {
 	if (userReadingList.length === 0) {
-		console.log('Your reading list is empty!')
+		displayMessage('Empty List')
 	} else {
-		console.log('Your reading list:')
+		displayMessage('Show List')
 		displayResults(userReadingList)
 	}
 	menuOptions()
