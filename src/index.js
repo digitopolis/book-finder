@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const getBooks = require('../lib/apiCommands')
-const { displayResults, welcome, getSearchTerm, menuOptions, menuSelection } = require('../lib/userInterface')
+const { displayResults, welcome, getSearchTerm, menuOptions, menuSelection, displayMessage } = require('../lib/userInterface')
 
 let searchResults = []
 let userReadingList = []
@@ -39,7 +39,7 @@ const app = async () => {
 			step = 'search'
 		} else if (step === 'search') {
 			searchTerm = getSearchTerm()
-			console.log(`Searching for "${searchTerm}". . .`)
+			displayMessage('Searching', searchTerm)
 			const books = await getBooks(searchTerm)
 			updateSearchResults(books)
 			step = 'submit'
