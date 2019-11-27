@@ -18,6 +18,8 @@ const formattedBook = {
 	publisher: 'Delacorte'
 }
 
-test('Formats response to book object', () => {
-	expect(formatResponse(mockResponse)[0]).toMatchObject(formattedBook)
-})
+describe('Testing formattedBook', () => {
+	it('Formats response to book object', () => {
+		expect(formatResponse(mockResponse)[0]).toMatchObject(formattedBook)
+	})
+});
