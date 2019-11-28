@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const getBooks = require('../lib/apiCommands')
+const { getBooks } = require('../lib/apiCommands')
 const { displayResults, welcome, getSearchTerm, menuOptions, menuSelection, displayMessage } = require('../lib/userInterface')
 
 let searchResults = []
