@@ -23,16 +23,16 @@ describe('Tests the welcome function', () => {
 })
 
 describe('Testing displayResults', () => {
-	it('Should display the title "Slaughterhouse-Five"', () => {
+	beforeEach(() => {
 		displayResults(bookResults)
+	})
+	it('Should display the title "Slaughterhouse-Five"', () => {
 		expect(global.console.log).toHaveBeenCalledWith('1. "Slaughterhouse-Five"')
 	})
 	it('Should display "unknown author" when none present', () => {
-		displayResults(bookResults)
 		expect(global.console.log).toHaveBeenCalledWith('   by unknown author')
 	})
 	it('Should display "unknown publisher" when none present', () => {
-		displayResults(bookResults)
 		expect(global.console.log).toHaveBeenCalledWith('   Published by unknown publisher')
 	})
 })
