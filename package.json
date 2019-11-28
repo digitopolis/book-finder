@@ -7,6 +7,9 @@
   "scripts": {
     "test": "jest ./tests"
   },
+	"jest": {
+		"verbose": true
+	},
   "author": "Matt Readout",
   "license": "MIT",
   "dependencies": {

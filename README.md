@@ -39,6 +39,14 @@ To install globally, and run simply with the command `book-finder`:
 npm install -g .
 ```
 
+### Testing
+
+Run the test suites with
+
+```
+jest
+```
+
 ## Authors
 
 * **Matt Readout** - [digitopolis](https://github.com/digitopolis)
